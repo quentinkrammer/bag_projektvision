@@ -42,8 +42,8 @@ body {
 
 .image-container {
   position: relative;
-  height: 100dvh;
   width: 100vw;
+  aspect-ratio: 333 / 277;
   border: 1px solid red;
   max-width: var(--max-image-width);
   max-height: var(--max-image-height);
@@ -54,14 +54,18 @@ body {
     position: absolute;
   }
   .green {
+    width: 40%;
     left: 10%;
     top: 55%;
   }
   .blue {
+    --max-width-blue: 162px;
+    width: 48%;
     left: 27%;
     top: 9%;
   }
   .yellow {
+    width: 39%;
     left: 51%;
     top: 53%;
   }
