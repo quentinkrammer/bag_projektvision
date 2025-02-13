@@ -4,6 +4,9 @@ body {
   --bag-darkgray: #575756;
   --bag-lightgray: #f0f0f0;
   --white: #fff;
+
+  --max-image-width: 333px;
+  --max-image-height: 277px;
 }
 
 *,
@@ -34,5 +37,32 @@ body {
   &:hover {
     transform: translate3d(0px, -5px, 0px);
     filter: drop-shadow(30px 10px 4px var(--bag-darkgray));
+  }
+}
+
+.image-container {
+  position: relative;
+  height: 100dvh;
+  width: 100vw;
+  border: 1px solid red;
+  max-width: var(--max-image-width);
+  max-height: var(--max-image-height);
+
+  display: grid;
+  img {
+    grid-area: 1 / 1 / 2 / 2;
+    position: absolute;
+  }
+  .green {
+    left: 10%;
+    top: 55%;
+  }
+  .blue {
+    left: 27%;
+    top: 9%;
+  }
+  .yellow {
+    left: 51%;
+    top: 53%;
   }
 }
