@@ -37,6 +37,11 @@ body {
   }
 }
 
+@keyframes opacity {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 #modal {
   position: absolute;
   top: 50%;
@@ -47,14 +52,13 @@ body {
 #modal {
   background-color: var(--bag-red);
   color: var(--white);
-  border-radius: 10px;
-  animation: fade-in 120ms ease-out;
+  border-radius: 18px;
+  animation: opacity 120ms ease-out;
 }
 #modal:popover-open {
-  width: 20vw;
-  height: 60vh;
+  width: 20dvw;
+  height: 60dvh;
 }
-@keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+#modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
 }
