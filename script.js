@@ -21,8 +21,8 @@ function showModal(objectID) {
     modal.togglePopover();
 }
 
-window.addEventListener("load", function () {
-    Array.from(objects).forEach(function(object) {
+window.addEventListener("load", () => {
+    Array.from(objects).forEach((object) => {
         object.addEventListener("click", () => {showModal(object.id);} );
     })
 })
