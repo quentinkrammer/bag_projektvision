@@ -17,6 +17,8 @@ window.onload = function () {
     },
   };
 
+  let lastClickedImage;
+
   const smallModal = document.getElementById("small-modal");
   const smallModalHeader = document.getElementById("small-modal-header");
   const smallModalContent = document.getElementById("small-modal-content");
@@ -48,14 +50,13 @@ window.onload = function () {
     largeModal.hidePopover()
   );
 
-  function onOpenLargeModal(e) {
-    const dataName = e.target.parentNode.getAttribute("data-name");
-    const { header, largeContent } = imageTexts[dataName];
+  function onOpenLargeModal() {
+    const { header, largeContent } = imageTexts[lastClickedImage];
 
     largeModalHeader.textContent = header;
     largeModalContent.textContent = largeContent;
 
-    const imagePath = `assets/vision_${dataName}.png`;
+    const imagePath = `assets/vision_${lastClickedImage}.png`;
     const imageElement = document.createElement("img");
     imageElement.setAttribute("src", imagePath);
     largeModalImageContainer.replaceChildren(imageElement);
@@ -67,7 +68,7 @@ window.onload = function () {
     const dataName = e.target.getAttribute("data-name");
     const { header, smallContent } = imageTexts[dataName];
 
-    openLargeModalButton.setAttribute("data-name", dataName);
+    lastClickedImage = dataName;
 
     smallModalHeader.textContent = header;
     smallModalContent.textContent = smallContent;
