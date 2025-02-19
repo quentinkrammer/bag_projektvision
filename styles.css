@@ -25,23 +25,35 @@ video {
 
 body {
   min-height: 100dvh;
-  display: grid;
 }
 
-.object {
-  position: absolute;
-  place-self: center;
+.image-container {
+  border: 2px solid red;
+  background: green;
+  aspect-ratio: 333 / 277;
+  max-width: 333px;
+  max-height: 277px;
+  position: relative;
+
+  img {
+    position: absolute;
+  }
+}
+
+#green {
+  width: 40%;
+  left: 10%;
+  top: 55%;
 }
 #blue {
-  margin-bottom: 105px;
-}
-#green {
-  margin-top: 105px;
-  margin-right: 130px;
+  width: 48%;
+  left: 27%;
+  top: 9%;
 }
 #yellow {
-  margin-top: 105px;
-  margin-left: 130px;
+  width: 39%;
+  left: 51%;
+  top: 53%;
 }
 
 .liftable {
@@ -52,45 +64,4 @@ body {
     transform: translate3d(0px, -5px, 0px);
     filter: drop-shadow(30px 10px 4px var(--bag-darkgray));
   }
-}
-
-@keyframes opacity {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-#modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px;
-  overflow: hidden;
-}
-#modal {
-  background-color: var(--bag-red);
-  color: var(--white);
-  border-radius: 18px;
-  animation: opacity 120ms ease-out;
-}
-
-#modal:popover-open {
-  width: 20dvw;
-  height: 60dvh;
-  border: none;
-}
-#backdrop {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100dvw;
-  height: 100dvh;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-#modal button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }

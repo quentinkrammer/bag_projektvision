@@ -2,22 +2,24 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BAG Projektvision</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
   </head>
   <body>
-    <img src="assets/vision_blue.png" class="object liftable" id="blue"/>
-    <img src="assets/vision_green.png" class="object liftable" id="green"/>
-    <img src="assets/vision_yellow.png" class="object liftable" id="yellow"/>
+    <div class="image-container">
+      <img src="assets/vision_blue.png" class="object liftable" id="blue" />
+      <img src="assets/vision_green.png" class="object liftable" id="green" />
+      <img src="assets/vision_yellow.png" class="object liftable" id="yellow" />
+    </div>
 
     <dialog id="modal" popover="manual">
       <button onclick="closeModal()">X</button>
       <h1>Titel</h1>
       <p>Text</p>
     </dialog>
-    
+
     <div id="backdrop"></div>
   </body>
 </html>
