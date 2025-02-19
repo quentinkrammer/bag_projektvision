@@ -9,7 +9,7 @@
 
 ---
 
-2. Beim Klicken auf ein Dreieck soll ein zentriertes Modal erscheinen. Das Modal wird zunächst als leeres rotes Viereck dargestellt.
+2. Beim Klicken auf ein Dreieck soll ein zentriertes Modal erscheinen. Das Modal wird zunächst als leeres rotes Viereck dargestellt. ✅
 
 ### Ressourcen/Tipps:
 
@@ -18,10 +18,10 @@
 
 ---
 
-3. Das Modal lässt sich über ein "X" Symbol in der oberen rechten Ecke schließen.
+3. Das Modal lässt sich über ein "X" Symbol in der oberen rechten Ecke schließen. ✅
 
 ---
 
-4. Befülle das Modal mit beispielhaften Textinhalten (Überschift und Fließtext). Die Textinhalte sollen unterschiedlich sein, je nachdem welches Dreieck angeklickt wurde.
+4. Befülle das Modal mit beispielhaften Textinhalten (Überschift und Fließtext). Die Textinhalte sollen unterschiedlich sein, je nachdem welches Dreieck angeklickt wurde. ✅
 
 5. **TBD**
