@@ -3,7 +3,7 @@ window.onload = function () {
     blue: {
       header: "Blue header",
       smallContent: lorem,
-      largeContent: "Blue large",
+      largeContent: lorem,
     },
     green: {
       header: "Green header",
@@ -29,6 +29,9 @@ window.onload = function () {
   const largeModalCloseButton = document.getElementById(
     "large-modal-close-button"
   );
+  const largeModalImageContainer = document.getElementById(
+    "large-modal-image-container"
+  );
   const imageElements = document.querySelectorAll("#image-container img");
   const openLargeModalButton = document.getElementById(
     "open-large-modal-button"
@@ -51,6 +54,12 @@ window.onload = function () {
 
     largeModalHeader.textContent = header;
     largeModalContent.textContent = largeContent;
+
+    const imagePath = `assets/vision_${dataName}.png`;
+    const imageElement = document.createElement("img");
+    imageElement.setAttribute("src", imagePath);
+    largeModalImageContainer.replaceChildren(imageElement);
+
     largeModal.showPopover();
   }
 

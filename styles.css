@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   --bag-red: #ea1b0a;
   --bag-darkgray: #575756;
-  --bag-lightgray: #f0f0f0;
+  --bag-lightgray: #f6f2ef;
   --white: #fff;
 
   --max-image-width: 333px;
@@ -32,7 +32,8 @@ body {
   min-height: 100dvh;
 }
 
-.liftable {
+.liftable,
+.large-popover-image-container img {
   cursor: pointer;
   transition: all 0.2s;
 
@@ -119,8 +120,53 @@ body {
   gap: 4px;
 }
 
-.large-popover {
+.large-popover-container {
   background: var(--bag-lightgray);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100dvh;
+  width: 100dvw;
+  padding: 2.5rem;
+}
+
+.large-popover-header {
+  grid-area: 1 / 1 / 2 / 3;
+  padding-bottom: 2.5rem;
+}
+
+.large-popover-content-outer {
+  padding: 2rem;
+  grid-area: 2 / 1 / 3 / 2;
+  /* display: flex;
+  flex-direction: column; */
+  overflow-y: auto;
+  background: var(--white);
+  max-width: 800px;
+}
+
+.large-popover-content-inner {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.large-popover-image-container {
+  grid-area: 2 / 2 / 3 / 3;
+  place-self: center;
+  padding-left: 2rem;
+
+  & img {
+    max-width: none;
+  }
+}
+
+.large-popover-close-button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--bag-red);
 }
 
 ::-webkit-scrollbar {

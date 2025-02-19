@@ -61,11 +61,39 @@
         </div>
       </div>
       <div id="large-modal" popover class="popover large-popover">
-        <div>
-          <button type="button" id="large-modal-close-button">X</button>
-          <h2 id="large-modal-header"></h2>
+        <div class="large-popover-container">
+          <div class="large-popover-header">
+            <button
+              type="button"
+              id="large-modal-close-button"
+              class="large-popover-close-button"
+            >
+              <svg
+                width="39"
+                height="33"
+                viewBox="0 0 39 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.6207 0.879359C18.0581 0.316306 17.2951 0 16.4996 0C15.7041 0 14.9412 0.316306 14.3786 0.879359L0.878372 14.3947C0.315948 14.9579 0 15.7217 0 16.5181C0 17.3145 0.315948 18.0783 0.878372 18.6415L14.3786 32.1569C14.9444 32.704 15.7022 33.0067 16.4888 32.9999C17.2754 32.993 18.0279 32.6772 18.5841 32.1203C19.1404 31.5635 19.4559 30.8102 19.4627 30.0227C19.4695 29.2352 19.1671 28.4765 18.6207 27.9101L10.2415 19.5215H36C36.7956 19.5215 37.5587 19.2051 38.1213 18.6419C38.6839 18.0786 39 17.3147 39 16.5181C39 15.7216 38.6839 14.9576 38.1213 14.3944C37.5587 13.8311 36.7956 13.5147 36 13.5147H10.2415L18.6207 5.12618C19.1831 4.56296 19.499 3.79917 19.499 3.00277C19.499 2.20637 19.1831 1.44258 18.6207 0.879359Z"
+                  fill="#EA1B0A"
+                ></path>
+              </svg>
+              <h2 id="large-modal-header"></h2>
+            </button>
+          </div>
+          <div class="large-popover-content-outer">
+            <div
+              id="large-modal-content"
+              class="large-popover-content-inner"
+            ></div>
+          </div>
+          <div
+            id="large-modal-image-container"
+            class="large-popover-image-container"
+          ></div>
         </div>
-        <div id="large-modal-content"></div>
       </div>
     </div>
   </body>
