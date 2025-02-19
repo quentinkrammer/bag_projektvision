@@ -1,4 +1,5 @@
 body {
+  min-height: 100dvh;
   font-family: Arial, sans-serif;
   --bag-red: #b81f40;
   --bag-darkgray: #575756;
@@ -23,25 +24,29 @@ video {
   max-width: 100%;
 }
 
-body {
-  min-height: 100dvh;
-  display: grid;
+.object-container {
+  position: relative;
+  max-width: 333px;
+  max-height: 277px;
+  aspect-ratio: 333 / 277;
+
+  .object { position: absolute; }
 }
 
-.object {
-  position: absolute;
-  place-self: center;
-}
 #blue {
-  margin-bottom: 105px;
+  width: 46%;
+  left: 27%;
+  top: 8%;
 }
 #green {
-  margin-top: 105px;
-  margin-right: 130px;
+  width: 40%;
+  left: 10%;
+  top: 49%;
 }
 #yellow {
-  margin-top: 105px;
-  margin-left: 130px;
+  width: 40%;
+  left: 50%;
+  top: 48%;
 }
 
 .liftable {
@@ -64,21 +69,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px;
   overflow: hidden;
-}
-#modal {
+
   background-color: var(--bag-red);
   color: var(--white);
-  border-radius: 18px;
   animation: opacity 120ms ease-out;
+
+  border: none;
+  border-radius: 18px;
+  padding: 10px;
+
+  &:popover-open {
+    width: 40dvw;
+    height: 60dvh;
+  }
 }
 
-#modal:popover-open {
-  width: 20dvw;
-  height: 60dvh;
-  border: none;
-}
 #backdrop {
   display: none;
   position: absolute;
@@ -86,6 +92,7 @@ body {
   left: 0;
   width: 100dvw;
   height: 100dvh;
+
   background-color: rgba(0, 0, 0, 0.6);
 }
 
