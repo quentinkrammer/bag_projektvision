@@ -1,6 +1,6 @@
 # Aufgaben
 
-1. Verschiebe die farbigen Dreiecke so, dass sie dem Bild [vision_whole](./assets/vision_whole.png) entsprechen. Gehe hierbei davon aus, dass der Viewport groß genug ist, um das Bild in voller größe darzustellen.
+1. Verschiebe die farbigen Dreiecke so, dass sie dem Bild [vision_whole](./assets/vision_whole.png) entsprechen. Gehe hierbei davon aus, dass der Viewport groß genug ist, um das Bild in voller größe darzustellen. ⏺️
 
 ### Ressourcen/Tipps:
 
