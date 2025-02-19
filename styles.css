@@ -161,6 +161,12 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .large-popover-image-container {
+    display: none;
+  }
+}
+
 .large-popover-close-button {
   display: flex;
   gap: 4px;
