@@ -1,30 +1,67 @@
 window.onload = function () {
-  const windowModal = document.getElementById("window-modal");
-  const windowModalHeader = document.getElementById("window-modal-header");
-  const windowModalContent = document.getElementById("window-modal-content");
-  const windowModalCloseButton = document.getElementById(
-    "window-modal-close-button"
+  const imageTexts = {
+    blue: {
+      header: "Blue header",
+      smallContent: "Blue content",
+      largeContent: "Blue large",
+    },
+    green: {
+      header: "Green header",
+      smallContent: "Green content",
+      largeContent: "Green large",
+    },
+    yellow: {
+      header: "Yellow header",
+      smallContent: "Yellow content",
+      largeContent: "Yellow large",
+    },
+  };
+
+  const smallModal = document.getElementById("small-modal");
+  const smallModalHeader = document.getElementById("small-modal-header");
+  const smallModalContent = document.getElementById("small-modal-content");
+  const smallModalCloseButton = document.getElementById(
+    "small-modal-close-button"
+  );
+  const largeModal = document.getElementById("large-modal");
+  const largeModalHeader = document.getElementById("large-modal-header");
+  const largeModalContent = document.getElementById("large-modal-content");
+  const largeModalCloseButton = document.getElementById(
+    "large-modal-close-button"
   );
   const imageElements = document.querySelectorAll("#image-container img");
+  const openLargeModalButton = document.getElementById(
+    "open-large-modal-button"
+  );
 
   imageElements.forEach((imageElement) =>
-    imageElement.addEventListener("click", onImageClick)
+    imageElement.addEventListener("click", onOpenSmallModal)
   );
-  windowModalCloseButton.addEventListener("click", () =>
-    windowModal.hidePopover()
+  smallModalCloseButton.addEventListener("click", () =>
+    smallModal.hidePopover()
+  );
+  openLargeModalButton.addEventListener("click", onOpenLargeModal);
+  largeModalCloseButton.addEventListener("click", () =>
+    largeModal.hidePopover()
   );
 
-  function onImageClick(e) {
-    const imageTexts = {
-      blue: { header: "Blue header", content: "Blue content" },
-      green: { header: "Green header", content: "Green content" },
-      yellow: { header: "Yellow header", content: "Yellow content" },
-    };
-
+  function onOpenLargeModal(e) {
     const dataName = e.target.getAttribute("data-name");
-    const { header, content } = imageTexts[dataName];
-    windowModalHeader.textContent = header;
-    windowModalContent.textContent = content;
-    windowModal.showPopover();
+    const { header, largeContent } = imageTexts[dataName];
+
+    largeModalHeader.textContent = header;
+    largeModalContent.textContent = largeContent;
+    largeModal.showPopover();
+  }
+
+  function onOpenSmallModal(e) {
+    const dataName = e.target.getAttribute("data-name");
+    const { header, smallContent } = imageTexts[dataName];
+
+    openLargeModalButton.setAttribute("data-name", dataName);
+
+    smallModalHeader.textContent = header;
+    smallModalContent.textContent = smallContent;
+    smallModal.showPopover();
   }
 };
