@@ -24,4 +24,10 @@
 
 4. Befülle das Modal mit beispielhaften Textinhalten (Überschift und Fließtext). Die Textinhalte sollen unterschiedlich sein, je nachdem welches Dreieck angeklickt wurde. ✅
 
-5. **TBD**
+5. Implementiere das Details Modal
+
+   - Inhalt und überschrift sind abhängig vom zuvor angeklickten image
+   - Nach schliessen des Detail Modals, sind beide Modals geschlossen
+   - Zusätzlich zum Textinhalt wird auf der Rechten seite des Detail Modals das zuvor angeklicke Bild dargestellt
+
+6. **TBD**
