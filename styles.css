@@ -47,6 +47,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 10px;
   overflow: hidden;
 }
 #modal {
@@ -55,10 +56,24 @@ body {
   border-radius: 18px;
   animation: opacity 120ms ease-out;
 }
+
 #modal:popover-open {
   width: 20dvw;
   height: 60dvh;
+  border: none;
 }
-#modal::backdrop {
+#backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }

@@ -1,4 +1,3 @@
-var objects = document.getElementsByClassName("object");
 const modalData = {
     blue: {
         "title": "Blue",
@@ -14,15 +13,24 @@ const modalData = {
     }
 };
 
-function showModal(objectID) {
+function openModal(objectID) {
     let modal = document.getElementById("modal");
-    modal.children[0].textContent = modalData[objectID].title;
-    modal.children[1].textContent = modalData[objectID].text;
-    modal.togglePopover();
+    let backdrop = document.getElementById("backdrop");
+    modal.children[1].textContent = modalData[objectID].title;
+    modal.children[2].textContent = modalData[objectID].text;
+    backdrop.style.display = "block"
+    modal.showPopover();
+}
+function closeModal() {
+    let modal = document.getElementById("modal");
+    let backdrop = document.getElementById("backdrop");
+    modal.hidePopover();
+    backdrop.style.display = "none"
 }
 
 window.addEventListener("load", () => {
+    let objects = document.getElementsByClassName("object");
     Array.from(objects).forEach((object) => {
-        object.addEventListener("click", () => {showModal(object.id);} );
+        object.addEventListener("click", () => {openModal(object.id)} );
     })
 })
