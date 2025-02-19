@@ -46,15 +46,11 @@ body {
 .image-container {
   margin-inline: auto;
   position: relative;
-  width: 100vw;
   aspect-ratio: 333 / 277;
   border: 1px solid red;
   max-width: var(--max-image-width);
-  max-height: var(--max-image-height);
 
-  display: grid;
   img {
-    grid-area: 1 / 1 / 2 / 2;
     position: absolute;
   }
   .green {
@@ -63,7 +59,6 @@ body {
     top: 55%;
   }
   .blue {
-    --max-width-blue: 162px;
     width: 48%;
     left: 27%;
     top: 9%;
