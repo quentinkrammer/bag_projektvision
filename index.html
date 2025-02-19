@@ -8,10 +8,29 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="image-container">
-      <img src="assets/vision_blue.png" class="liftable blue" />
-      <img src="assets/vision_green.png" class="liftable green" />
-      <img src="assets/vision_yellow.png" class="liftable yellow" />
+    <div id="image-container" class="image-container">
+      <img
+        src="assets/vision_blue.png"
+        class="liftable blue"
+        data-name="blue"
+      />
+      <img
+        src="assets/vision_green.png"
+        class="liftable green"
+        data-name="green"
+      />
+      <img
+        src="assets/vision_yellow.png"
+        class="liftable yellow"
+        data-name="yellow"
+      />
+    </div>
+    <div id="window-modal" popover>
+      <div>
+        <h2 id="window-modal-header"></h2>
+        <button type="button" id="window-modal-close-button">X</button>
+      </div>
+      <div id="window-modal-content"></div>
     </div>
   </body>
 </html>
