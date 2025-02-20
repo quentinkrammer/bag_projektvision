@@ -24,7 +24,7 @@
 
 4. Befülle das Modal mit beispielhaften Textinhalten (Überschift und Fließtext). Die Textinhalte sollen unterschiedlich sein, je nachdem welches Dreieck angeklickt wurde. ✅
 
-5. Implementiere das Details Modal
+5. Implementiere das Details Modal ⏺️ (siehe Commit/Push Message)
 
    - Inhalt und überschrift sind abhängig vom zuvor angeklickten image
    - Nach schliessen des Detail Modals, sind beide Modals geschlossen
