@@ -175,6 +175,7 @@ body {
 }
 
 .large-popover-close-button {
+  all: unset;
   display: flex;
   gap: 4px;
   align-items: center;
