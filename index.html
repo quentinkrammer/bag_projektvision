@@ -15,7 +15,13 @@
     </div>
 
     <dialog id="modal" popover="manual">
-      <button onclick="closeModal()">X</button>
+      <button class="closebtn" onclick="closeModal(true)">X</button>
+      <h1>Titel</h1>
+      <p>Text</p>
+      <button id="detailsbtn" onclick="openDetails()">Details</button>
+    </dialog>
+    <dialog id="details" popover="manual">
+      <button class="closebtn" onclick="closeDetails()">X</button>
       <h1>Titel</h1>
       <p>Text</p>
     </dialog>
