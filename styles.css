@@ -125,6 +125,18 @@ body {
   padding: 2.5rem;
 }
 
+@media screen and (max-width: 420px) {
+  .large-popover-container {
+    padding-inline: 0.5rem;
+  }
+
+  .large-popover-content-outer {
+    && {
+      padding-inline: 1rem;
+    }
+  }
+}
+
 .large-popover-header {
   grid-area: 1 / 1 / 2 / 3;
   padding-bottom: 2.5rem;
