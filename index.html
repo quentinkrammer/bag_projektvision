@@ -8,24 +8,30 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="object-container">
-      <img src="assets/vision_blue.png" class="object liftable" id="blue"/>
-      <img src="assets/vision_green.png" class="object liftable" id="green"/>
-      <img src="assets/vision_yellow.png" class="object liftable" id="yellow"/>
+    <div class="componentCotainer">
+      <img src="assets/vision_blue.png" class="visionComponent liftable" id="blue"/>
+      <img src="assets/vision_green.png" class="visionComponent liftable" id="green"/>
+      <img src="assets/vision_yellow.png" class="visionComponent liftable" id="yellow"/>
     </div>
 
-    <dialog id="modal" popover="manual">
-      <button class="closebtn" onclick="closeModal(true)">X</button>
+    <dialog id="overview" popover="manual">
+      <button id="closeModal" onclick="closeOverview()">X</button>
       <h1>Titel</h1>
       <p>Text</p>
-      <button id="detailsbtn" onclick="openDetails()">Details</button>
+      <button id="openDetails" onclick="openDetails()">Details</button>
     </dialog>
+
     <dialog id="details" popover="manual">
-      <button class="closebtn" onclick="closeDetails()">X</button>
-      <h1>Titel</h1>
-      <p>Text</p>
+      <div id="titleContainer">
+        <button id="closeDetails" onclick="closeDetails()">X</button>
+        <h1>Titel</h1>
+      </div>
+      <div id="descriptionContainer">
+        <p>Text</p>
+      </div>
+      <img id="shownComponent" src=""/>
     </dialog>
     
-    <div id="backdrop"></div>
+    <div id="overviewBackdrop"></div>
   </body>
 </html>

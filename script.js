@@ -1,66 +1,65 @@
-const objectData = {
+const componentData = {
     blue: {
+        "id": "blue",
         "title": "Blue",
-        "modalText": "Lorem Ipsum",
+        "overviewText": "Lorem Ipsum",
         "detailsText": "Lorem Ipsum 1"
     },
     green: {
+        "id": "green",
         "title": "Green",
-        "modalText": "Lorem Ipsum",
+        "overviewText": "Lorem Ipsum",
         "detailsText": "Lorem Ipsum 1"
     },
     yellow: {
+        "id": "yellow",
         "title": "Yellow",
-        "modalText": "Lorem Ipsum",
+        "overviewText": "Lorem Ipsum",
         "detailsText": "Lorem Ipsum 1"
     }
 };
-var currentObject = null;
+var currentComponent = null;
 
-function openModal(objectID) {
-    currentObject = objectID;
-    let modal = document.getElementById("modal");
-    let backdrop = document.getElementById("backdrop");
-    modal.children[1].textContent = objectData[objectID].title;
-    modal.children[2].textContent = objectData[objectID].modalText;
+function openOverview(componentID) {
+    currentComponent = componentData[componentID];
+    let overview = document.getElementById("overview");
+    let backdrop = document.getElementById("overviewBackdrop");
+
+    overview.querySelector("h1").textContent = currentComponent.title;
+    overview.querySelector("p").textContent = currentComponent.overviewText;
+
     backdrop.style.display = "block"
-    modal.showPopover();
+    overview.showPopover();
 
 }
-function closeModal(inclBackdrop) {
-    let modal = document.getElementById("modal");
-    let backdrop = document.getElementById("backdrop");
-    modal.hidePopover();
-    if(inclBackdrop) { backdrop.style.display = "none"; }
+function closeOverview() {
+    let overview = document.getElementById("overview");
+    let backdrop = document.getElementById("overviewBackdrop");
+
+    overview.hidePopover();
+    backdrop.style.display = "none";
 }
 
 function openDetails() {
     let details = document.getElementById("details");
-    let backdrop = document.getElementById("backdrop");
-    let object = document.getElementById(currentObject);
-    details.children[1].textContent = objectData[currentObject].title;
-    details.children[2].textContent = objectData[currentObject].detailsText;
-    closeModal(false);
-    object.classList.remove("liftable");
-    object.classList.add("fullscreen");
+    let visionComponent = document.getElementById(currentComponent.id);
+
+    details.querySelector("#titleContainer h1").textContent = currentComponent.title;
+    details.querySelector("#descriptionContainer p").textContent = currentComponent.detailsText;
+    details.querySelector("#shownComponent").src = visionComponent.src;
+
+    closeOverview();
     details.showPopover();
-    backdrop.classList.add("transparent");
 }
 
 function closeDetails() {
     let details = document.getElementById("details");
-    let backdrop = document.getElementById("backdrop");
-    let object = document.getElementById(currentObject);
-    object.classList.remove("fullscreen");
-    object.classList.add("liftable");
     details.hidePopover();
-    backdrop.style.display = "none";
-    backdrop.classList.remove("transparent");
 }
 
 window.addEventListener("load", () => {
-    let objects = document.getElementsByClassName("object");
-    Array.from(objects).forEach((object) => {
-        object.addEventListener("click", () => {openModal(object.id)} );
+    let components = document.getElementsByClassName("visionComponent");
+    Array.from(components).forEach((component) => {
+        component.addEventListener("click", () => {openOverview(component.id)} );
     })
 })
