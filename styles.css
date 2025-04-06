@@ -68,6 +68,15 @@ body {
     left: 51%;
     top: 53%;
   }
+
+  svg {
+    background: skyblue;
+    fill: red;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    width: 50%;
+  }
 }
 
 .popover {
